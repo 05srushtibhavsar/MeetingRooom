@@ -1,16 +1,15 @@
 body{
     margin: 0;
     padding: 0;
-    background: url(room2.jpeg);
+    background: url(room.jpg) no-repeat;
     background-size: cover;
-    font-family: sans-serif;
 }
 
 .form{
-   
+    font-family: "Roboto",sans-serif;
     position: relative;
     z-index: 1;
-    background:#000;
+    background:#FFFFFF;
     opacity: 99%;
     max-width: 260px;
     margin: 200px auto 100px;
@@ -18,17 +17,12 @@ body{
     text-align: center;
     box-shadow: 0 0 20px orgba(0,0,0,0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     border-radius: 10px;
-    height: 300px;
 }
 
 .form p{
-
-    color: #fff;
-    margin: 0;
-    padding: 0 0 20px;
+    font-size: 20px;
+    padding: 1px;
     text-align: center;
-    font-size: 22px;
-    
 }
 
 .form input{
@@ -57,16 +51,16 @@ body{
     text-transform: uppercase;
     outline: 0;
     border-radius: 10px;
-    background: #F54455;
+    background:rgb(10, 236, 112);
     width: 100%;
     border: 0;
     padding: 15px;
-    color: #000;
+    color: #FFFFFF;
     font-size: 14px;
     cursor: pointer;
 }
 
 .form button:hover, .form button:active, .form button:focus{
-    background-color: #4EF360;
+    background-color: #06c5cf69;
     transition: all is ease 0s;
 }

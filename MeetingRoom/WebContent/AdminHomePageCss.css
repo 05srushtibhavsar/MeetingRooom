@@ -35,7 +35,7 @@ header{
 }
 
 .sidebar{
-    background: #2F323A;
+    background: #000;
     margin-top: 0px;
     padding-top: 30px;
     position: fixed;
@@ -78,7 +78,7 @@ header{
 
 .content{
     margin-left: 250px;
-    background: url(room.jpg) no-repeat;
+    background: url(room2.jpeg);
     background-position: center;
     background-size: cover;
     height: 100vh;

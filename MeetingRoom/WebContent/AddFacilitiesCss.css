@@ -1,0 +1,152 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background: url(room2.jpeg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    
+}
+
+.loginbox
+{
+    
+    width: 320px;
+    height: 450px;
+    background: #000;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 50px 30px;
+}
+
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 25px;
+    
+}
+
+p
+{
+    margin: 0;
+    padding: 0 0 20px;
+    font-size: 16px;
+}
+.dropdown
+{
+    width: 200px; 
+    position: relative;
+}
+
+.dropdown:hover .dropdown-list
+{
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-select
+{
+    padding: 1.5px;
+    border-radius: 3px;
+    background-color: white;
+    color: #000;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    cursor: pointer;
+    
+    
+}
+
+.dropdown-list
+{
+    border-radius: 3px;
+    background-color: white;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s linear, visibility 0.2s linear; 
+}
+
+.dropdown-list_item
+{
+    padding: inherit;
+    font-size: 15px;
+    color: #000;
+    
+}
+
+.loginBox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 30px;
+    background: #F54455;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 20px;
+    width: 250px;
+    
+}
+
+.loginBox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #4EF360;
+    color: #000;
+    
+}
+
+.loginBox input
+{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginBox input[type="text"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.dashboardLink a
+{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 20px;
+    color: #F54455; 
+    
+}
+
+.dashboardLink a:hover
+{
+    color: #4EF360;
+    
+}
+
+
+
+
+
+
+
