@@ -15,22 +15,29 @@
 	<body class="bg-light text-dark">
 		<div class="container">
 			<h1 class="text-center m-2">Add Room</h1>
-			<form class="border border-primary p-5 mt-5">
+			<form class="border border-primary p-5 mt-5" id="formInput">
 				<div class="mb-3">
 					<label for="roomId" class="form-label">Room ID</label>
 					<select
 						class="form-select"
 						aria-label="Default select example"
 					>
-						<option selected>Enter Room ID</option>
-						<option value="1">R1</option>
+						<option selected id="roomId">Enter Room ID</option>
+						<option value="1" selected>R1</option>
 						<option value="2">R2</option>
 						<option value="3">R3</option>
 					</select>
 				</div>
 				<div class="mb-3">
-					<label for="desc" class="form-label">Descrption</label>
-					<input type="text" class="form-control" id="desc" />
+					<label for="description" class="form-label"
+						>Descrption</label
+					>
+					<input
+						type="text"
+						class="form-control"
+						id="description"
+						required
+					/>
 				</div>
 				<div class="mb-3">
 					<label for="desc" class="form-label">Facilities : </label
@@ -39,10 +46,10 @@
 						<input
 							class="form-check-input"
 							type="checkbox"
-							id="inlineCheckbox1"
+							id="wifiInput"
 							value="wifi"
 						/>
-						<label class="form-check-label" for="inlineCheckbox1"
+						<label class="form-check-label" for="wifiInput"
 							>Wifi</label
 						>
 					</div>
@@ -50,10 +57,10 @@
 						<input
 							class="form-check-input"
 							type="checkbox"
-							id="inlineCheckbox2"
+							id="projectorInput"
 							value="option2"
 						/>
-						<label class="form-check-label" for="inlineCheckbox2"
+						<label class="form-check-label" for="projectorInput"
 							>Projector</label
 						>
 					</div>
@@ -61,48 +68,46 @@
 						<input
 							class="form-check-input"
 							type="checkbox"
-							id="inlineCheckbox3"
+							id="acInput"
 							value="option2"
 						/>
-						<label class="form-check-label" for="inlineCheckbox3"
-							>AC</label
-						>
+						<label class="form-check-label" for="acInput">AC</label>
 					</div>
 					<div class="form-check form-check-inline">
 						<input
 							class="form-check-input"
 							type="checkbox"
-							id="inlineCheckbox2"
+							id="tvInput"
 							value="option2"
 						/>
-						<label class="form-check-label" for="inlineCheckbox2"
-							>TV</label
-						>
+						<label class="form-check-label" for="tvInput">TV</label>
 					</div>
 				</div>
 				<div class="">
 					<div class="row">
 						<div class="col-md-6">
 							<div class="mb-3">
-								<label class="form-label" for="pic1"
+								<label class="form-label" for="pic1Input"
 									>Image 1</label
 								>
 								<input
 									type="file"
 									class="form-control"
-									id="pic1"
+									id="pic1Input"
+									required
 								/>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="mb-3">
-								<label class="form-label" for="pic1"
+								<label class="form-label" for="pic2Input"
 									>Image 2</label
 								>
 								<input
 									type="file"
 									class="form-control"
-									id="pic2"
+									id="pic2Input"
+									required
 								/>
 							</div>
 						</div>
@@ -110,25 +115,27 @@
 					<div class="row">
 						<div class="col-md-6">
 							<div class="mb-3">
-								<label class="form-label" for="pic1"
+								<label class="form-label" for="pic3Input"
 									>Image 3</label
 								>
 								<input
 									type="file"
 									class="form-control"
-									id="pic3"
+									id="pic3Input"
+									required
 								/>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="mb-3">
-								<label class="form-label" for="pic1"
+								<label class="form-label" for="pic4Input"
 									>Image 4</label
 								>
 								<input
 									type="file"
 									class="form-control"
-									id="pic4"
+									id="pic4Input"
+									required
 								/>
 							</div>
 						</div>
@@ -144,5 +151,6 @@
 			integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
 			crossorigin="anonymous"
 		></script>
+		<script src="./add-room.js"></script>
 	</body>
 </html>
