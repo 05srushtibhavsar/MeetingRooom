@@ -1,4 +1,4 @@
-console.log('in register');
+console.log('in register page');
 
 const FormInput = document.getElementById('formInput');
 const FirstName = document.getElementById('firstname');
