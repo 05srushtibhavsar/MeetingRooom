@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background: url(room.jpg) no-repeat;
+    background: url(pic2.jpg) no-repeat;
     background-size: cover;
 }
 
@@ -51,7 +51,7 @@ body{
     text-transform: uppercase;
     outline: 0;
     border-radius: 10px;
-    background:rgb(10, 236, 112);
+    background:rgb(3, 156, 97);
     width: 100%;
     border: 0;
     padding: 15px;
