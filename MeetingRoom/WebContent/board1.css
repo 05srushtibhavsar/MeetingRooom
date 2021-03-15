@@ -1,6 +1,9 @@
 body{
     margin: 0;
     padding: 0;
+    background: url(room2.jpeg);
+    background-size: cover;
+    background-position: center;
     font-family: "Roboto", sans-serif;
 }
 
@@ -78,7 +81,7 @@ header{
 
 .content{
     margin-left: 250px;
-    background: url(room.jpg) no-repeat;
+    background: url(pic3.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     height: 100vh;
