@@ -5,20 +5,78 @@
 <body>
 
     <div class="loginbox">
-    <img src="avatar4.webp" class="avatar">
-        <h1> Admin Login Here</h1>
-        <form action="AdminHomePage.html">
+        <img src="avatar4.webp" class="avatar">
+        <h1> Admin Login</h1>
+        <form  method="POST"  action="AdminHomePage.html"  id="formInput"  onsubmit="return val(this)" >
         
-            <p>Username</p>
-            <input type="number" name = "" placeholder="Enter Mobile Number">
-            <p>Password</p>
-            <input type="password" name = "" placeholder="Enter Password">
-            <input type="submit" name = "sub" value="Login"><br>
+            <p>Username *</p>
+            <input type="number" id="mobile"  name = "mobile" placeholder="Enter Mobile Number"  required>
+            <p>Password *</p>
+            <input type="password"  id="password" name = "password" placeholder="Enter Password" required>
+            
+            <button type="submit" class="btn" >
+                <a href="AdminHomePage.html"></a>   Login</button>
             <a href="#" >Forgot Password?</a><br>
             
         </form>
-         
     </div>
 </body>
+         
+        <script type="text/javascript">
+
+
+            console.log('in register');
+            
+            const FormInput = document.getElementById('formInput');
+            const Password = document.getElementById('password');
+            
+            const sendError = (err) => {
+                window.alert(err);
+            };
+            
+            const checkPasswordLength = (password) => {
+                if (password.length < 8) {
+                    return false;
+                }
+                return true;
+            };
+            
+            
+            FormInput.addEventListener('submit', function(event){
+                event.preventDefault();
+                const firstName = FirstName.value.trim();
+                const lastName = LastName.value.trim();
+            
+                if (!checkPasswordLength(Password.value.length)) {
+                    return sendError('Password must be 8 character long');
+                }
+            });
+            
+            
+              const mob =   document.getElementById('mobile');
+            
+              function val(elem){
+
+                var one = String(mob.value).charAt(0);
+               
+                if(mob.value.length == 10){
+                    if((one != '9') && (one != '8') && (one != '7'))
+                    {
+                    alert('Mobile no. should start with 7,8 or 9');
+                    }
+                }
+                else{
+                    alert('Mobile no. should be of 10 digits');
+                }
+                if(Password.value.length < 8)
+                {
+                    alert('Password must be at least 8 characters long');
+                }
+                  console.log('correct data');
+                
+              }
+        </script>
+            
+  
 </head>
 </html>
