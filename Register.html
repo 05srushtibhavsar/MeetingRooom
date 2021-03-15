@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Meeting Room Booking System</title>
+    <link rel="stylesheet" href="register.css">
+  </head>
+  <body>
+    <form class="signup-form" id="formInput" onsubmit="val(this)">
+      <div class="form-header">
+        <h1>Register</h1>
+      </div>
+
+
+      <div class="form-body">
+
+
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="firstname" class="label-title">First name *</label>
+            <input type="text" id="firstname" class="form-input" placeholder="enter your first name" required="required" />
+          </div>
+          <div class="form-group right">
+            <label for="lastname" class="label-title">Last name *</label>
+            <input type="text" id="lastname" class="form-input" placeholder="enter your last name" required="required"  />
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="email" class="label-title">Email*</label>
+          <input type="email" id="email" class="form-input" placeholder="enter your email" required="required">
+        </div>
+
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="password" class="label-title">Password *</label>
+            <input type="password" id="password" class="form-input" placeholder="enter your password"  required="required">
+          </div>
+
+          <div class="form-group right">
+            <label for="confirm-password" class="label-title">Confirm Password *</label>
+            <input type="password" class="form-input" id="confirm-password" placeholder="enter your password again" required="required"/>
+          </div>
+        </div>
+          
+          <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="dateofbirth" class="label-title">Date of Birth *</label>
+            <input type="date" id="dateofbirth" class="form-input" placeholder="enter your date of birth" required="required" />
+          </div>
+          <div class="form-group right">
+            <label for="mobile" class="label-title">Mobile Number *</label>
+            <input type="number" class="form-input" id="confirm_mobile" placeholder="enter your mobile Number" pattern= "[6-9]\d{9}" title="Enter valid phone number" required="required" />
+          </div>
+        </div>
+
+        <div class="horizontal-group">
+          <div class="form-group left" >
+            <label for="choose-file" class="label-title">Upload Profile Picture *</label>
+            <input type="file" id="choose-file" size="80">
+          </div>
+          <div class="form-group right">
+            <label for="experience" class="label-title">Age *</label>
+            <input type="number" min="18" max="80" class="form-input" />
+          </div>
+        </div>
+
+
+
+      <div class="form-footer">
+        <span>* required</span>
+        <button type="submit" class="btn">Create</button>
+      </div>
+        
+      <a href="Login.html" >Already have an account?</a><br>
+    </form>
+
+    <script type="text/javascript">
+
+
+console.log('in register');
+
+const FormInput = document.getElementById('formInput');
+const FirstName = document.getElementById('firstname');
+const LastName = document.getElementById('lastname');
+const Email = document.getElementById('email');
+const Password = document.getElementById('password');
+const ConfirmPassword = document.getElementById('confirm-password');
+const ChooseFile = document.getElementById('choose-file');
+const Age = document.getElementById('age');
+
+const sendError = (err) => {
+	window.alert(err);
+};
+
+const isEmail = (email) => {
+	const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+	return re.test(email);
+};
+
+const checkPasswordLength = (password) => {
+	if (password.length < 8) {
+		return false;
+	}
+	return true;
+};
+
+
+const checkPassword = (password, rePassword) => {
+	if (password !== rePassword) {
+		return false;
+	}
+	return true;
+};
+
+const validateFileUpload = (fileName) => {
+	var allowed_extensions = new Array('jpg', 'png', 'gif');
+	var file_extension = fileName.split('.').pop().toLowerCase();
+
+	for (var i = 0; i <= allowed_extensions.length; i++) {
+		if (allowed_extensions[i] == file_extension) {
+			return true;
+		}
+	}
+
+	return false;
+};
+
+FormInput.addEventListener('submit', (event) => {
+	event.preventDefault();
+	const firstName = FirstName.value.trim();
+	const lastName = LastName.value.trim();
+
+	const email = Email.value.trim();
+	if (!isEmail(email)) {
+		return sendError('invalid email');
+	}
+
+	if (!checkPasswordLength(Password.value)) {
+		return sendError('Password must be 8 character long');
+	}
+
+	if (!checkPassword(Password.value, ConfirmPassword.value)) {
+		return sendError('Both Passwords should match');
+	}
+
+	if (!validateFileUpload(ChooseFile.value)) {
+		return sendError('File must be a image');
+	}
+
+	if (!Age.value || isNaN(parseInt(Age.value))) {
+		return sendError('Age must be a number');
+	}
+
+});
+
+
+  const mob =   document.getElementById('confirm_mobile');
+
+  function val(elem){
+    if(mob.value.length > 10)
+    {
+      alert('Mobile no. should be of 10 digits');
+    }
+    if(mob.value.length < 10)
+    {
+      alert('Mobile no. should be of 10 digits');
+    }
+
+    var one = String(mob.value).charAt(0);
+    if((one != '9') && (one != '8') && (one != '7'))
+    {
+      alert('Mobile no. should start with 7,8 or 9');
+    }
+    else{
+      alert('Registered successfully');
+    }
+	  console.log('correct data');
+	
+  }
+
+    </script>
+
+  </body>
+</html>
