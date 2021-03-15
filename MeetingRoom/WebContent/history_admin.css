@@ -1,18 +1,17 @@
-*{
+body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    background-color: #000;
+    background: url(room2.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
     font-family: sans-serif;
 }
+
 
 .heading{
     font-size: 0 10%;
     text-align: center;
-    color: #f1f1f1;
+    color: black;
     margin-bottom: 30px;
 }
 
